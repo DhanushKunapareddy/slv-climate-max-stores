@@ -1,0 +1,157 @@
+/* styles.css */
+
+/* General Reset */
+body, h1, h2, input, table {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Main Heading Styling */
+#main-heading {
+    text-align: center;
+    font-size: 3.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Subheading Styling */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 20px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+/* Search Bar Styling */
+#searchInput {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#searchInput:focus {
+    border-color: #2980b9;
+}
+
+/* Table Styling */
+#storesTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#storesTable thead {
+    background-color: #3498db;
+    color: #fff;
+}
+
+#storesTable th, #storesTable td {
+    padding: 15px;
+    text-align: left;
+}
+
+#storesTable th {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#storesTable tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+#storesTable tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+#storesTable tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* Map Link Styling */
+#storesTable tbody td a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#storesTable tbody td a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #main-heading {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #searchInput {
+        font-size: 0.9rem;
+    }
+
+    #storesTable th, #storesTable td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #main-heading {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    #searchInput {
+        font-size: 0.8rem;
+    }
+
+    #storesTable th, #storesTable td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
